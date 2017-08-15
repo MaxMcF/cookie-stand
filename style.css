@@ -1,0 +1,57 @@
+* {
+  background-color: #ef6493;
+}
+h1{
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+}
+a {
+  background-color: white;
+}
+.navList{
+  display: inline-block;
+  padding: 10px;
+  float: left;
+  position: relative;
+  background-color: White;
+  font-family: 'Dosis', sans-serif;
+}
+nav {
+  height: 50px;
+  margin-left: 30%;
+  margin-right: 30%;
+  border-bottom: 3px solid black;
+  border-top: 3px solid black;
+  background-color: White;
+}
+.fishPic {
+  display: block;
+  margin: auto;
+  width: 58%;
+}
+.tableElement {
+  display: block;
+  margin: auto;
+  width: 55%;
+
+}
+.tableBorder {
+  border: 1px solid black;
+  margin: auto;
+  background-color: White;
+  font-family: 'Playfair Display', serif;
+}
+.sidebar {
+  display: block;
+  width: 15%;
+  position: absolute;
+  left: 10px;
+  top: 80px;
+  background-color: White;
+  border: 1px solid black;
+  padding: 10px;
+
+}
+.side {
+  background-color: white;
+}
