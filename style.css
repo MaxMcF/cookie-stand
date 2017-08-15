@@ -10,11 +10,14 @@ a {
 }
 .navList{
   display: inline-block;
-  padding: 10px;
+  padding: 6px;
   float: left;
   position: relative;
   background-color: White;
   font-family: 'Dosis', sans-serif;
+  width: auto;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 nav {
   height: 50px;
@@ -24,10 +27,16 @@ nav {
   border-top: 3px solid black;
   background-color: White;
 }
+td {
+  width: 60px;
+  height: 30px;
+  text-align: center;
+}
 .fishPic {
   display: block;
   margin: auto;
   width: 58%;
+  margin-bottom: 130px;
 }
 .tableElement {
   display: block;
@@ -41,12 +50,25 @@ nav {
   background-color: White;
   font-family: 'Playfair Display', serif;
 }
+.topRow {
+  color: White;
+  background-color: Black;
+}
+.totalsTotal {
+  background-color: #40f792;
+}
+.totalsStore {
+  background-color: #ff8e8e;
+}
+.hTotal {
+  background-color: #ffe8bc;
+}
 .sidebar {
   display: block;
   width: 15%;
   position: absolute;
   left: 10px;
-  top: 80px;
+  top: 10px;
   background-color: White;
   border: 1px solid black;
   padding: 10px;
@@ -54,4 +76,28 @@ nav {
 }
 .side {
   background-color: white;
+}
+#addStore {
+  display: block;
+  width: 15%;
+  position: absolute;
+  right: 10px;
+  top: 80px;
+  background-color: White;
+  border: 1px solid black;
+  padding: 30px;
+  height: 300px;
+}
+.input {
+  background-color: White;
+}
+h2 {
+  background-color: White;
+}
+form {
+  background-color: White;
+}
+#addStoreSubmit {
+  display: block;
+  position:absolute;
 }
