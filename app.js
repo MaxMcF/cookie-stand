@@ -166,4 +166,4 @@ var hourTotal = 0;
 //   };
 //   preventDefault();
 // };
-Store.createTable();
+storeOne.createTable();
