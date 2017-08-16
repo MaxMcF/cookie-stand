@@ -41,7 +41,7 @@ td {
 .tableElement {
   display: block;
   margin: auto;
-  width: 55%;
+  width: 700px;
 
 }
 .tableBorder {
@@ -49,6 +49,9 @@ td {
   margin: auto;
   background-color: White;
   font-family: 'Playfair Display', serif;
+}
+.storeNames {
+  width: 200px;
 }
 .topRow {
   color: White;
@@ -86,7 +89,7 @@ td {
   background-color: White;
   border: 1px solid black;
   padding: 30px;
-  height: 300px;
+  height: 482px;
 }
 .input {
   background-color: White;
