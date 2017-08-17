@@ -137,6 +137,7 @@ var addStoreButton = function (event){
   var newString = appendString('Avg Cookes Per Hour', newForm);
   var brTag = breakTag (newForm);
   var avgCookInput = createAndAppend('input', 'input', 'avgCook', 'number', 'cookInput', '', newForm);
+  avgCookInput.setAttribute('step', '0.1');
   var brTag = breakTag (newForm);
   var submitButton = createAndAppend('button', '', 'addStoreSubmit', '', 'confirmButton', 'Confirm Add Store', newForm);
 
@@ -168,6 +169,7 @@ var confirmStore = function (event){
     }
   }
   tableFooter();
+  newForm.reset();
   //rerun hourly totals
   // var hideTable = document.getElementById(tableCounterArray[tableCounter]);
   // hideTable.style.display = 'none';
