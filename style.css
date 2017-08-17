@@ -28,7 +28,6 @@ nav {
   background-color: White;
 }
 td {
-  width: 60px;
   height: 30px;
   text-align: center;
 }
@@ -38,34 +37,14 @@ td {
   width: 58%;
   margin-bottom: 130px;
 }
-.tableElement {
-  display: block;
-  margin: auto;
-  width: 700px;
 
-}
 .tableBorder {
   border: 1px solid black;
   margin: auto;
   background-color: White;
   font-family: 'Playfair Display', serif;
 }
-.storeNames {
-  width: 200px;
-}
-.topRow {
-  color: White;
-  background-color: Black;
-}
-.totalsTotal {
-  background-color: #40f792;
-}
-.totalsStore {
-  background-color: #ff8e8e;
-}
-.hTotal {
-  background-color: #ffe8bc;
-}
+
 .sidebar {
   display: block;
   width: 15%;
