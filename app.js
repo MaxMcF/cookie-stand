@@ -15,14 +15,6 @@ function Store(name, minCust, maxCust, avgSales){
   this.salesPerHour = [];
   allStores.push(this);
 
-  // this.calcTotalPerHour = function(){
-  //   for (var n = 0; n < allStores.length; n++) {
-  //     for (var k = 0; k < storeHour.length; k++){
-  //
-  //     }
-  //   }
-  // };
-
   this.getCookiesHourly = function(){
     for (var i = 0; i < (storeHour.length - 2); i++){
       var custPerHour = Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
@@ -45,10 +37,8 @@ function Store(name, minCust, maxCust, avgSales){
         // console.log(this.salesPerHour);
         hourTotalArray.push(this.salesPerHour[q]);
       }
-      // console.log(hourTotalArray);
     };
   };
-  // this.hourlyTotals();
 }
 var pike = new Store('First and Pike', 23, 65, 6.3);
 var seaTac = new Store('SeaTac', 3, 24, 1.2);
@@ -115,8 +105,7 @@ var fillTable = function (){
   };
 };
 var tableFooter = function(){
-  var dummyRow = createAndAppend('tr', ['tableBorder', 'hTotal'], '', '', '', '', table);
-  var foot = createAndAppend('tf', ['tableBorder', 'hTotal'], '','','','Hourly Totals', dummyRow);
+  var dummyRow = createAndAppend('tr', ['tableBorder', 'hTotal'], 'lastRow','','','Hourly Totals', table);
   var grandTotal = 0;
   for (var n = 0; n < (storeHour.length - 2); n++){
     var totalPerHour = 0;
@@ -155,17 +144,33 @@ var addStoreButton = function (event){
 var confirmStore = function (event){
   var storeNameChange = event.target.nameInput.value;
   console.log(storeNameChange);
-  var custMinChange = event.target.minInput.value;
+  var custMinChange = parseInt(event.target.minInput.value);
   console.log(custMinChange);
-  var custMaxChange = event.target.maxInput.value;
+  var custMaxChange = parseInt(event.target.maxInput.value);
   console.log(custMaxChange);
-  var avgCookChange = event.target.cookInput.value;
+  var avgCookChange = parseFloat(event.target.cookInput.value);
   console.log(avgCookChange);
   var newStore = new Store(storeNameChange, custMinChange, custMaxChange, avgCookChange);
   allStores.push(newStore);
+  //delete hourly totals
+
+  // newStore.getCookiesHourly();
+  newStore.totalPerDay();
+  var table = document.getElementById('table');
+  var subTotalsRow = document.getElementById('lastRow');
+  table.removeChild(subTotalsRow);
+  var row = createAndAppend('tr', ['tableBorder','tableElement'], '', '', '', newStore.name, table);
+  for (var j = 0; j < newStore.salesPerHour.length + 1; j++){
+    if (j < newStore.salesPerHour.length){
+      var td = createAndAppend('td', 'tableBorder', '', '', '', newStore.salesPerHour[j], row);
+    } else {
+      var totalForStore = createAndAppend('td', ['tableBorder','storeTotal'], '', '', '', storeTotals[(storeTotals.length - 1)], row);
+    }
+  }
+  tableFooter();
+  //rerun hourly totals
   // var hideTable = document.getElementById(tableCounterArray[tableCounter]);
   // hideTable.style.display = 'none';
-  addRow(storeNameChange, custMinChange, custMaxChange, avgCookChange);
 };
 var stopSubmission = function (event){
   event.preventDefault();
