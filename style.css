@@ -93,3 +93,55 @@ form {
 p {
   background-color: white;
 }
+.merch {
+  border: thin solid black;
+  background-color: white;
+  width: 800px;
+  margin: auto;
+  padding: 15px;
+}
+.recipes {
+  border: thin solid black;
+  background-color: white;
+  width: 800px;
+  margin: auto;
+  padding: 15px;
+  height: 375px;
+}
+.cookieBox{
+  border: thin solid black;
+  background-color: white;
+  width: 800px;
+  margin: auto;
+  padding: 15px;
+  height: 250px;
+}
+.merch {
+  height: 380px;
+}
+.shirt {
+  float: left;
+}
+.cookie {
+  position: relative;
+  float: right;
+}
+.storyTime{
+  width: 90%;
+  border: thin solid black;
+  background-color: white;
+  margin: auto;
+  padding: 15px;
+  height: 1000px;
+}
+.cutter {
+  float: left;
+}
+.familyFriendly{
+  position: relative;
+  bottom: -170px;
+  background-color: white;
+}
+.salmonSource {
+  background-color: white;
+}
