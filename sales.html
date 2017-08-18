@@ -11,15 +11,14 @@
     <h1>Pat's Salmon Cookies</h1>
     <nav>
       <ul>
-        <li class="navList"><a href='#'>Home</a></li>
-        <li class="navList"><a href='sales.html'>Sales</a></li>
+        <li class="navList"><a href='index.html'>Home</a></li>
+        <li class="navList"><a href='#'>Sales</a></li>
         <li class="navList"><a href='#'>Our Story</a></li>
         <li class="navList"><a href='#'>Recipes</a></li>
         <li class="navList"><a href='#'>Contact</a></li>
       </ul>
     </nav>
     <img src='https://github.com/codefellows/seattle-201d25/raw/master/class-06-dom-objects-domain_modeling/lab/assets/salmon.png' class='fishPic'/>
-    
     <div class='sidebar'>
       <h2 class='side'>Welcome to Pat's Salmon Cookies! We have the best Salmon cookies in Seattle, and have won numerous salmon cookie baking contests.</h2>
       <p class='side'>
@@ -27,11 +26,14 @@
       </p>
       <p class='side'>Our fish is sourced locally and tastes delicous in a creamy cookie batter.</p>
     </div>
-    <div class='welcome'>
-      <h2>Testimonials</h2>
-      <p>"These salmon cookies are so good I quit my job and moved to Seattle just to be closer to them. Now that's a cookie!" - John Johnson</p>
-      <p>"Not only do these cookies taste good, but they clean your teeth while you eat them. I havent brushed my teeth in weeks!!" - Stephenie Salsbury</p>
-      <p>"The coho cookies are good, but the Copper River cookies are my favorite. They're only available for a couple weeks, so get them while they last!" - Ellen Everlinslysonton</p>
+    <div id='addStore'>
+      <h2>Add a Store</h2>
+      <form id='form'>
+        <input type='submit' value='Add a New Store' id='storeAdd'/>
+      </form>
+      <form id='newForm'>
+      </form>
     </div>
   </body>
+  <script src='app.js' type='text/javascript'></script>
 </html>

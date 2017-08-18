@@ -83,7 +83,7 @@ var createAndAppend = function (toCreate, addClass, addID, addType, addName, add
   addParent.appendChild(theElement);
   return theElement;
 };
-var createTableandHead = function (){
+var createTableAndHead = function (){
   var table = createAndAppend('table', ['tableBorder', 'topRow'], 'table', '', '', '', body);
   for(var j = 0; j < storeHour.length; j++){
     var newTHead = createAndAppend('th', ['tableBorder', 'topRow'], '', '', '', storeHour[j], table);
@@ -101,7 +101,6 @@ var fillTable = function (){
         var totalForStore = createAndAppend('td', ['tableBorder','storeTotal'], '', '', '', storeTotals[i], row);
       }
     }
-    // allStores[i].salesPerHour = [];
   };
 };
 var tableFooter = function(){
@@ -120,7 +119,7 @@ var tableFooter = function(){
   }
   var totalsTotal = createAndAppend('td', ['tableBorder', 'totalsTotal'], '', '', '', grandTotal, dummyRow);
 };
-var addStoreButton = function (event){
+var renderSubmitButton = function (event){
   event.preventDefault();
   var newString = appendString('Store Name', newForm);
   var brTag = breakTag (newForm);
@@ -142,7 +141,7 @@ var addStoreButton = function (event){
   var submitButton = createAndAppend('button', '', 'addStoreSubmit', '', 'confirmButton', 'Confirm Add Store', newForm);
 
 };
-var confirmStore = function (event){
+var confirmStoreButton = function (event){
   var storeNameChange = event.target.nameInput.value;
   console.log(storeNameChange);
   var custMinChange = parseInt(event.target.minInput.value);
@@ -153,9 +152,6 @@ var confirmStore = function (event){
   console.log(avgCookChange);
   var newStore = new Store(storeNameChange, custMinChange, custMaxChange, avgCookChange);
   allStores.push(newStore);
-  //delete hourly totals
-
-  // newStore.getCookiesHourly();
   newStore.totalPerDay();
   var table = document.getElementById('table');
   var subTotalsRow = document.getElementById('lastRow');
@@ -170,21 +166,17 @@ var confirmStore = function (event){
   }
   tableFooter();
   newForm.reset();
-  //rerun hourly totals
-  // var hideTable = document.getElementById(tableCounterArray[tableCounter]);
-  // hideTable.style.display = 'none';
 };
 var stopSubmission = function (event){
   event.preventDefault();
 };
 var form = document.getElementById('form');
 form.addEventListener('submit', stopSubmission);
-form.addEventListener('submit', addStoreButton);
+form.addEventListener('submit', renderSubmitButton);
 
 var newForm = document.getElementById('newForm');
 newForm.addEventListener('submit', stopSubmission);
-newForm.addEventListener('submit', confirmStore);
-// storeOne.createTable();
-createTableandHead();
+newForm.addEventListener('submit', confirmStoreButton);
+createTableAndHead();
 fillTable();
 tableFooter();

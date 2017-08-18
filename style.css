@@ -83,3 +83,13 @@ form {
   display: block;
   position:absolute;
 }
+.welcome {
+  background-color: white;
+  width: 400px;
+  margin: auto;
+  border: thin solid black;
+  padding: 15px;
+}
+p {
+  background-color: white;
+}
