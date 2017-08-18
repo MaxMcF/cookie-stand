@@ -55,7 +55,7 @@ var appendString = function (string, parent) {
   newString.innerText = string;
   parent.appendChild(newString);
 };
-var createAndAppend = function (toCreate, addClass, addID, addType, addName, addInner, addParent){
+var createAndAppend = function (toCreate, addClass, addID, addType, addName, addInner, addParent, addRequired){
   var theElement = document.createElement(toCreate);
   if (addClass && addClass !== ''){
     var classString = '';
@@ -79,6 +79,9 @@ var createAndAppend = function (toCreate, addClass, addID, addType, addName, add
   }
   if (addName && addName !== ''){
     theElement.setAttribute('name', addName);
+  }
+  if(addRequired === 'required'){
+    theElement.setAttribute('required');
   }
   addParent.appendChild(theElement);
   return theElement;
@@ -139,6 +142,10 @@ var renderSubmitButton = function (event){
   avgCookInput.setAttribute('step', '0.1');
   var brTag = breakTag (newForm);
   var submitButton = createAndAppend('button', '', 'addStoreSubmit', '', 'confirmButton', 'Confirm Add Store', newForm);
+  // avgCookInput.setAttribute('required');
+  // storeNameInput.setAttribute('required');
+  // custMinInput.setAttribute('required');
+  // custMaxInput.setAttribute('required');
 
 };
 var confirmStoreButton = function (event){
