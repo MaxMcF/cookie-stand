@@ -10,11 +10,14 @@ a {
 }
 .navList{
   display: inline-block;
-  padding: 10px;
+  padding: 6px;
   float: left;
   position: relative;
   background-color: White;
   font-family: 'Dosis', sans-serif;
+  width: auto;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 nav {
   height: 50px;
@@ -24,34 +27,121 @@ nav {
   border-top: 3px solid black;
   background-color: White;
 }
+td {
+  height: 30px;
+  text-align: center;
+}
 .fishPic {
   display: block;
   margin: auto;
   width: 58%;
+  margin-bottom: 130px;
 }
-.tableElement {
-  display: block;
-  margin: auto;
-  width: 55%;
 
-}
 .tableBorder {
   border: 1px solid black;
   margin: auto;
   background-color: White;
   font-family: 'Playfair Display', serif;
 }
+
 .sidebar {
   display: block;
   width: 15%;
   position: absolute;
   left: 10px;
-  top: 80px;
+  top: 10px;
   background-color: White;
   border: 1px solid black;
   padding: 10px;
 
 }
 .side {
+  background-color: white;
+}
+#addStore {
+  display: block;
+  width: 15%;
+  position: absolute;
+  right: 10px;
+  top: 80px;
+  background-color: White;
+  border: 1px solid black;
+  padding: 30px;
+  height: 482px;
+}
+.input {
+  background-color: White;
+}
+h2 {
+  background-color: White;
+}
+form {
+  background-color: White;
+}
+#addStoreSubmit {
+  display: block;
+  position:absolute;
+}
+.welcome {
+  background-color: white;
+  width: 400px;
+  margin: auto;
+  border: thin solid black;
+  padding: 15px;
+}
+p {
+  background-color: white;
+}
+.merch {
+  border: thin solid black;
+  background-color: white;
+  width: 800px;
+  margin: auto;
+  padding: 15px;
+}
+.recipes {
+  border: thin solid black;
+  background-color: white;
+  width: 800px;
+  margin: auto;
+  padding: 15px;
+  height: 375px;
+}
+.cookieBox{
+  border: thin solid black;
+  background-color: white;
+  width: 800px;
+  margin: auto;
+  padding: 15px;
+  height: 250px;
+}
+.merch {
+  height: 380px;
+}
+.shirt {
+  float: left;
+}
+.cookie {
+  position: relative;
+  float: right;
+}
+.storyTime{
+  width: 90%;
+  border: thin solid black;
+  background-color: white;
+  margin: auto;
+  padding: 15px;
+  height: 1000px;
+}
+.cutter {
+  float: left;
+}
+.familyFriendly{
+  position: relative;
+  bottom: -170px;
+  background-color: white;
+}
+.salmonSource {
   background-color: white;
 }
